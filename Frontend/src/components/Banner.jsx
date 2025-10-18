@@ -2,6 +2,7 @@ import React from 'react';
 
 const Banner = () => {
   return (
+    <div>
     // MAIN CONTAINER
     <div className="w-full flex flex-col-reverse md:flex-row items-center">
 
@@ -51,6 +52,10 @@ const Banner = () => {
       <div className="w-full md:w-1/2 p-5 flex justify-center">
         <img src="/image.jpg" alt="Banner.." className="max-w-full h-auto" />
       </div>
+    </div>
+    {/* <div>
+      <img src="/image.jpg" alt="Banner.." className="max-w-full h-auto" />
+    </div> */}
     </div>
   );
 };
