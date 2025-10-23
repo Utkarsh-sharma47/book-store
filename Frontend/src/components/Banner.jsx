@@ -49,7 +49,7 @@ const Banner = () => {
       </div>
 
       {/* RIGHT - Image Section */}
-      <div className="w-full md:w-1/2 p-5 flex justify-center">
+      <div className="w-full md:w-1/2 p-5 flex justify-center mt-10">
         <img src="/image.jpg" alt="Banner.." className="max-w-full h-auto" />
       </div>
     </div>

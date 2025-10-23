@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "name": "The Great Gatsby",
+    "title": "A classic novel about the American dream.",
+    "price": 12.99,
+    "category": "Fiction",
+    "image": "https://images.unsplash.com/photo-1544936207-0a5b0e9e1b8f?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 2,
+    "name": "To Kill a Mockingbird",
+    "title": "A powerful story of justice and innocence.",
+    "price": 0,
+    "category": "Free",
+    "image": "https://images.unsplash.com/photo-1589829085413-56c46d199bd3?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 3,
+    "name": "1984",
+    "title": "A dystopian novel exploring totalitarianism.",
+    "price": 9.5,
+    "category": "Fiction",
+    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 4,
+    "name": "The Catcher in the Rye",
+    "title": "A story about teenage angst and alienation.",
+    "price": 8.75,
+    "category": "Fiction",
+    "image": "https://images.unsplash.com/photo-1529651737248-dad5e2f76b53?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 5,
+    "name": "Pride and Prejudice",
+    "title": "A timeless romance novel by Jane Austen.",
+    "price": 0,
+    "category": "Romance",
+    "image": "https://images.unsplash.com/photo-1551024739-78e9d60c45ca?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 6,
+    "name": "Eloquent JavaScript",
+    "title": "A modern introduction to programming.",
+    "price": 25.0,
+    "category": "Programming",
+    "image": "https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 7,
+    "name": "Sapiens: A Brief History of Humankind",
+    "title": "An exploration of human history and its impact.",
+    "price": 18.49,
+    "category": "Non-Fiction",
+    "image": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 8,
+    "name": "The Art of War",
+    "title": "Ancient military strategy book by Sun Tzu.",
+    "price": 0,
+    "category": "Philosophy",
+    "image": "https://images.unsplash.com/photo-1526312426976-f4d754fa9bd6?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 9,
+    "name": "Meditations",
+    "title": "Thoughts and philosophy by Marcus Aurelius.",
+    "price": 0,
+    "category": "Self-Help",
+    "image": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 10,
+    "name": "Frankenstein",
+    "title": "Gothic novel exploring science and morality.",
+    "price": 0,
+    "category": "Horror",
+    "image": "https://images.unsplash.com/photo-1600488995682-2a0a91b33fdc?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 11,
+    "name": "The Prince",
+    "title": "Political treatise by Niccolò Machiavelli.",
+    "price": 0,
+    "category": "Politics",
+    "image": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 12,
+    "name": "Dracula",
+    "title": "Classic horror novel by Bram Stoker.",
+    "price": 0,
+    "category": "Horror",
+    "image": "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 13,
+    "name": "Atomic Habits",
+    "title": "A proven framework for building better habits.",
+    "price": 14.99,
+    "category": "Self-Improvement",
+    "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 14,
+    "name": "Clean Code",
+    "title": "A handbook of agile software craftsmanship.",
+    "price": 28.99,
+    "category": "Programming",
+    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 15,
+    "name": "A Brief History of Time",
+    "title": "Stephen Hawking’s landmark work on the universe.",
+    "price": 19.99,
+    "category": "Science",
+    "image": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 16,
+    "name": "The Lean Startup",
+    "title": "How today's entrepreneurs use continuous innovation.",
+    "price": 17.99,
+    "category": "Business",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 17,
+    "name": "The Hobbit",
+    "title": "A fantasy adventure preceding The Lord of the Rings.",
+    "price": 10.99,
+    "category": "Fantasy",
+    "image": "https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 18,
+    "name": "Deep Work",
+    "title": "Rules for focused success in a distracted world.",
+    "price": 15.49,
+    "category": "Productivity",
+    "image": "https://images.unsplash.com/photo-1553729459-efe14ef6055d?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 19,
+    "name": "Thinking, Fast and Slow",
+    "title": "A look into the two systems that drive human thought.",
+    "price": 16.99,
+    "category": "Psychology",
+    "image": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 20,
+    "name": "Introduction to Machine Learning",
+    "title": "Learn the fundamentals of machine learning algorithms.",
+    "price": 0,
+    "category": "Technology",
+    "image": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=400&q=80"
+  }
+]

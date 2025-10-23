@@ -22,10 +22,11 @@ const Navbar = () => {
   const navItems = (
     <>
       <li>
-        <a className="font-medium text-gray-700 hover:text-indigo-600">Home</a>
+        <a href="/" className="font-medium text-gray-700 hover:text-indigo-600">
+        Home</a>
       </li>
       <li>
-        <a className="font-medium text-gray-700 hover:text-indigo-600">
+        <a href="/courses" className="font-medium text-gray-700 hover:text-indigo-600">
           Courses
         </a>
       </li>
@@ -43,7 +44,7 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`max-w-screen-2xl mx-auto px-1 border-b border-gray-200 shadow-md md:px-4 fixed top-0 left-0 right-0 bg-white z-50 transition ease-in-out duration-300 ${
+        className={`max-w-screen-2xl sticky top-0 z-50 bg-white shadow-md mx-auto px-1 border-b border-gray-200 shadow-md md:px-4 fixed top-0 left-0 right-0 bg-white z-50 transition ease-in-out duration-300 ${
           stick ? "shadow-md bg-indigo-200 backdrop-blur" : ""
         }`}
       >
