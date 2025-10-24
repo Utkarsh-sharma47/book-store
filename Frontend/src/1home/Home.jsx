@@ -4,7 +4,6 @@ import React from 'react';
 // You need to import the components you want to use.
 // The '../' goes up one directory from 'home' to 'src',
 // and then 'components/' goes into the components folder.
-import Navbar from '../components/Navbar';
 import Banner from '../components/Banner';
 import Freebook from '../components/Freebook';
 import Footer from '../components/Footer';
@@ -13,9 +12,7 @@ import Footer from '../components/Footer';
 const Home = () => {
   return (
     <>
-      <div className="bg-white min-h-screen text-black">
-        {/* Navbar */}
-        <Navbar />
+      <div className="bg-white dark:bg-slate-900 min-h-screen text-black dark:text-white transition-colors duration-300">
         {/* Banner */}
         <Banner />
         {/* Cards of free book*/}

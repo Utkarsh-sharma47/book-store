@@ -15,10 +15,10 @@ const Navbar = () => {
   useEffect(() => {
     if (theme === "dark") {
       root.classList.add("dark");
-      root.setAttribute("theme", "dark"); // for daisyUI
+      root.setAttribute("data-theme", "dark"); // for daisyUI
     } else {
       root.classList.remove("dark");
-      root.setAttribute("theme", "light"); // for daisyUI
+      root.setAttribute("data-theme", "light"); // for daisyUI
     }
     localStorage.setItem("theme", theme);
   }, [theme]);

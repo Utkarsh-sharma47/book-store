@@ -2,7 +2,7 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="w-full flex flex-col-reverse md:flex-row items-center px-4 md:px-16 py-8">
+    <div className="w-full flex flex-col-reverse md:flex-row items-center dark:bg-gray-900 dark:text-white px-4 md:px-16 py-8">
       {/* LEFT - Text Content */}
       <div className="w-full md:w-1/2 p-4 md:p-8 text-center md:text-left">
         <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight mb-4">

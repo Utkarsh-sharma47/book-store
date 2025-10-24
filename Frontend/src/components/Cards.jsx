@@ -10,7 +10,7 @@ const Cards = ({ book }) => {
 
   return (
     <div
-      className="card flex flex-col justify-between bg-white shadow-md rounded-xl 
+      className="card flex flex-col justify-between dark:bg-gray-900 dark:text-white bg-white shadow-md rounded-xl 
       transition-all duration-300 hover:shadow-lg hover:scale-[1.02] 
       mx-3 my-4 h-[420px] max-w-xs"
     >
