@@ -5,7 +5,7 @@
     "title": "A classic novel about the American dream.",
     "price": 12.99,
     "category": "Fiction",
-    "image": "https://images.unsplash.com/photo-1544936207-0a5b0e9e1b8f?auto=format&fit=crop&w=400&q=80"
+    "image": "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=400&q=80"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "title": "A powerful story of justice and innocence.",
     "price": 0,
     "category": "Free",
-    "image": "https://images.unsplash.com/photo-1589829085413-56c46d199bd3?auto=format&fit=crop&w=400&q=80"
+    "image": "https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=400&q=80"
   },
   {
     "id": 3,
@@ -29,7 +29,7 @@
     "title": "A story about teenage angst and alienation.",
     "price": 8.75,
     "category": "Fiction",
-    "image": "https://images.unsplash.com/photo-1529651737248-dad5e2f76b53?auto=format&fit=crop&w=400&q=80"
+    "image": "https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=400&q=80"
   },
   {
     "id": 5,
@@ -76,15 +76,15 @@
     "name": "Frankenstein",
     "title": "Gothic novel exploring science and morality.",
     "price": 0,
-    "category": "Horror",
-    "image": "https://images.unsplash.com/photo-1600488995682-2a0a91b33fdc?auto=format&fit=crop&w=400&q=80"
+    "category": "H",
+    "image": "https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=400&q=80"
   },
   {
     "id": 11,
     "name": "The Prince",
     "title": "Political treatise by Niccolò Machiavelli.",
     "price": 0,
-    "category": "Politics",
+    "category": "Free",
     "image": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=400&q=80"
   },
   {
@@ -92,7 +92,7 @@
     "name": "Dracula",
     "title": "Classic horror novel by Bram Stoker.",
     "price": 0,
-    "category": "Horror",
+    "category": "Free",
     "image": "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=400&q=80"
   },
   {
@@ -132,7 +132,7 @@
     "name": "The Hobbit",
     "title": "A fantasy adventure preceding The Lord of the Rings.",
     "price": 10.99,
-    "category": "Fantasy",
+    "category": "Free",
     "image": "https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=400&q=80"
   },
   {
@@ -156,7 +156,7 @@
     "name": "Introduction to Machine Learning",
     "title": "Learn the fundamentals of machine learning algorithms.",
     "price": 0,
-    "category": "Technology",
+    "category": "Free",
     "image": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=400&q=80"
   }
 ]
