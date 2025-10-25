@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 const Courses = () => {
   return (
     <>
-      <div className="bg-white min-h-screen text-black">
+      <div className="bg-white min-h-screen dark:bg-gray-900 dark:text-white text-black">
         <Navbar />
         <div className="mt-16 mb-8 px-6">
           <Course />

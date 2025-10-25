@@ -8,7 +8,7 @@ const Banner = () => {
         <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight mb-4">
           Hello! Learn Everything Here
         </h1>
-        <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-6">
+        <p className="text-sm sm:text-base md:text-lg dark:text-gray-300 text-gray-700 mb-6">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium maxime accusamus voluptatem explicabo. At laborum reprehenderit, aliquam provident excepturi officiis voluptas modi.
         </p>
 

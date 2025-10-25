@@ -72,11 +72,11 @@ const Freebook = () => {
   };
 
   return (
-    <div className="max-w-screen-2xl container mx-auto px-4 md:px-8 my-10">
+    <div className="max-w-screen-2xl container dark:bg-gray-900 dark:text-gray-300 mx-auto px-4 md:px-8 my-10">
       {/* Header */}
       <div className="text-center md:text-left mb-8">
-        <h1 className="font-semibold text-3xl text-gray-800">Free Courses</h1>
-        <p className="text-gray-600 text-sm md:text-base mt-1">
+        <h1 className="font-semibold text-3xl text-gray-800 dark:text-white">Free Courses</h1>
+        <p className="text-gray-600 text-sm md:text-base mt-1 dark:text-gray-300">
           Explore our handpicked collection of free learning resources.
         </p>
       </div>

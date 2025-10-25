@@ -1,5 +1,6 @@
 // Navbar.jsx — Theme-safe, sticky, mobile search, neat comments
 import React, { useEffect, useState } from "react";
+import Login from "./Login";
 
 const Navbar = () => {
   // states
@@ -59,7 +60,7 @@ const Navbar = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 
-        ${stick ? "bg-indigo-50 dark:bg-slate-900/80 backdrop-blur-sm" : "bg-white dark:bg-slate-900"}`}
+        ${stick ? "bg-indigo-50 dark:bg-slate-900/80" : "bg-white dark:bg-slate-900"}`}
     >
       <div className="max-w-screen-2xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Left: logo + mobile dropdown */}
@@ -143,7 +144,8 @@ const Navbar = () => {
           </button>
 
           {/* login */}
-          <a className="btn btn-sm bg-indigo-500 text-white hover:bg-indigo-700">Login</a>
+          <a className="btn btn-sm bg-indigo-500 text-white hover:bg-indigo-700" onClick={()=>document.getElementById('my_modal_3').showModal()}>Login</a>
+          <Login />
         </div>
       </div>
     </header>

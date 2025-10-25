@@ -10,7 +10,7 @@ const Cards = ({ book }) => {
 
   return (
     <div
-      className="card flex flex-col justify-between dark:bg-gray-900 dark:text-white bg-white shadow-md rounded-xl 
+      className="card flex flex-col justify-between dark:bg-gray-900 dark:text-gray-300 bg-white shadow-md rounded-xl 
       transition-all duration-300 hover:shadow-lg hover:scale-[1.02] 
       mx-3 my-4 h-[420px] max-w-xs"
     >
@@ -27,7 +27,7 @@ const Cards = ({ book }) => {
       {/* Content */}
       <div className="card-body flex flex-col justify-between p-4">
         <div>
-          <h2 className="text-lg font-semibold text-gray-800 flex flex-wrap items-center">
+          <h2 className="text-lg dark:text-white font-semibold text-gray-800 flex flex-wrap items-center">
             {book.name}
             <span
               className="ml-2 px-3 py-1 text-xs bg-blue-100 text-blue-700 rounded-full 
@@ -36,11 +36,11 @@ const Cards = ({ book }) => {
               {book.category}
             </span>
           </h2>
-          <p className="text-sm text-gray-600 mt-1 line-clamp-2">{book.title}</p>
+          <p className="text-sm dark:text-gray-300 text-gray-600 mt-1 line-clamp-2">{book.title}</p>
         </div>
 
         <div className="flex justify-end mt-3">
-          <div className="badge badge-outline text-gray-700">{book.id}</div>
+          <div className="badge badge-outline dark:text-gray-300 text-gray-700">{book.id}</div>
         </div>
       </div>
     </div>
