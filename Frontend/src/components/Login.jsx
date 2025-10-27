@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import toast, { Toaster } from "react-hot-toast"; // ✅ import toast
 
 const Login = () => {
   const navigate = useNavigate();
@@ -16,15 +17,23 @@ const Login = () => {
     formState: { errors },
   } = useForm();
 
-  // When form is submitted successfully
+  // ✅ onSubmit Handler
   const onSubmit = (data) => {
-    console.log("Login Data:", data);
-    document.getElementById("my_modal_3").close();
-    navigate("/"); // redirect to home
+    // Dummy check (you can replace this with actual backend auth)
+    if (data.email === "test@gmail.com" && data.password === "123456") {
+      toast.success("Login successful! 🎉");
+      document.getElementById("my_modal_3").close();
+      navigate("/");
+    } else {
+      toast.error("Invalid email or password!");
+    }
   };
 
   return (
     <div>
+      {/* 🔔 Toast Container */}
+      <Toaster position="top-center" reverseOrder={false} />
+
       {/* Hidden trigger button (Navbar opens modal) */}
       <button
         className="btn btn-sm bg-indigo-500 text-white hover:bg-indigo-700 hidden"

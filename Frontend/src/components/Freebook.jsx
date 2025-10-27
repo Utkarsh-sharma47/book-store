@@ -2,8 +2,9 @@ import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import FileList from "../data/list.json";
 import Cards from "./Cards";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 // Custom Arrows
 const NextArrow = ({ className, onClick }) => (
@@ -31,16 +32,23 @@ const PrevArrow = ({ className, onClick }) => (
 );
 
 const Freebook = () => {
-  // Replace broken or missing images
-  const validData = FileList.map((item) => ({
-    ...item,
-    image:
-      item.image && item.image.startsWith("http")
-        ? item.image
-        : "https://images.unsplash.com/photo-1528209392026-4a51d5d5e26b?auto=format&fit=crop&w=400&q=80",
-  }));
+  const [book, setBook] = useState([]);
+  useEffect(() => {
+    const getBooks = async () => {
+      try {
+        const res= await axios.get("http://localhost:4001/book");
+        console.log(res.data);
+        const data = res.data.filter((item) => item.category === "Free");
+        setBook(data);
+      } catch (error) {
+        console.log("Error fetching books:", error);
+      }
+    };
+    getBooks();
+  }, []);
+ 
 
-  const filterData = validData.filter((item) => item.category === "Free");
+  // const filterData = validData.filter((item) => item.category === "Free"); FRONTEND ONLY SHOW 
 
   const settings = {
     dots: false,
@@ -84,7 +92,7 @@ const Freebook = () => {
       {/* Slider */}
       <div className="slider-container relative">
         <Slider {...settings}>
-          {filterData.map((book) => (
+          {book.map((book) => (
             <div key={book.id} className="flex justify-center">
               <Cards book={book} />
             </div>
