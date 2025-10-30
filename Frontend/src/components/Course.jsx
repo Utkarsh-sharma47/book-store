@@ -20,7 +20,7 @@ function Course() {
 
   return (
     <>
-      <div className="bg-white text-black p-6 rounded-lg shadow-sm min-h-screen">
+      <div className="bg-white text-black dark:bg-gray-900 dark:text-gray-300 p-6 rounded-lg shadow-sm min-h-screen">
         <h1 className="w-full text-3xl md:text-4xl dark:text-white font-bold mb-4 text-center">
           Welcome to Our <span className="text-pink-500">Learning Space</span>
         </h1>

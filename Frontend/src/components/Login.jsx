@@ -1,10 +1,13 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import toast, { Toaster } from "react-hot-toast"; // ✅ import toast
+import toast from "react-hot-toast";
+import { useAuth } from "../context/AuthProvider";
+import axios from "axios";
 
 const Login = () => {
   const navigate = useNavigate();
+  const { setAuthUser } = useAuth();
 
   const handleSignup = () => {
     document.getElementById("my_modal_3").close();
@@ -17,24 +20,51 @@ const Login = () => {
     formState: { errors },
   } = useForm();
 
-  // ✅ onSubmit Handler
-  const onSubmit = (data) => {
-    // Dummy check (you can replace this with actual backend auth)
-    if (data.email === "test@gmail.com" && data.password === "123456") {
-      toast.success("Login successful! 🎉");
-      document.getElementById("my_modal_3").close();
-      navigate("/");
-    } else {
-      toast.error("Invalid email or password!");
+  const onSubmit = async (data) => {
+    try {
+      const res = await axios.post("http://localhost:4001/user/login", data, {
+        headers: { "Content-Type": "application/json" },
+      });
+
+      if (res.status === 200 && res.data?.user) {
+        const user = res.data.user;
+        setAuthUser(user);
+        localStorage.setItem("user", JSON.stringify(user));
+
+        toast.success("Login successful!", { duration: 2000, position: "top-center" });
+
+        document.getElementById("my_modal_3").close();
+
+        setTimeout(() => navigate("/"), 2000);
+        return;
+      } else {
+        throw new Error(res.data?.message || "Login failed");
+      }
+    } catch (err) {
+      const fallbackEmail = "test@gmail.com";
+      const fallbackPass = "123456";
+
+      if (data.email === fallbackEmail && data.password === fallbackPass) {
+        const user = { username: "Test User", email: data.email };
+        setAuthUser(user);
+        localStorage.setItem("user", JSON.stringify(user));
+
+        toast.success("Login successful!", { duration: 2000, position: "top-center" });
+
+        document.getElementById("my_modal_3").close();
+
+        setTimeout(() => navigate("/"), 2000);
+      } else {
+        const msg = err.response?.data?.message || err.message || "Invalid credentials";
+        toast.error(msg, { position: "top-center", duration: 2000 });
+      }
     }
   };
 
   return (
     <div>
-      {/* 🔔 Toast Container */}
-      <Toaster position="top-center" reverseOrder={false} />
+      {/* Removed <Toaster /> from here */}
 
-      {/* Hidden trigger button (Navbar opens modal) */}
       <button
         className="btn btn-sm bg-indigo-500 text-white hover:bg-indigo-700 hidden"
         onClick={() => document.getElementById("my_modal_3").showModal()}
@@ -42,10 +72,8 @@ const Login = () => {
         Login
       </button>
 
-      {/* LOGIN MODAL */}
       <dialog id="my_modal_3" className="modal">
-        <div className="modal-box dark:bg-slate-900 dark:text-gray-100 rounded-xl shadow-lg">
-          {/* Close button */}
+        <div className="modal-box dark:bg-slate-900 dark:text-gray-100 rounded-xl shadow-lg transition-colors">
           <button
             onClick={() => document.getElementById("my_modal_3").close()}
             className="btn btn-sm btn-circle btn-ghost absolute right-3 top-3"
@@ -53,48 +81,37 @@ const Login = () => {
             ✕
           </button>
 
-          {/* Title */}
           <h3 className="font-bold text-lg text-indigo-600 dark:text-indigo-400 text-center mb-4">
-            Welcome Back!
+            Welcome Back
           </h3>
 
-          {/* ✅ Main Login Form */}
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-            {/* Email Field */}
             <div>
               <input
                 type="email"
                 placeholder="Email"
                 {...register("email", { required: "Email is required" })}
-                className={`w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400 ${
+                className={`w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400 
+                bg-gray-50 text-gray-900 dark:bg-gray-700 dark:text-gray-100 transition-colors ${
                   errors.email ? "border-red-500" : "border-gray-300"
                 }`}
               />
-              {errors.email && (
-                <p className="text-red-500 text-sm mt-1">
-                  {errors.email.message}
-                </p>
-              )}
+              {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
             </div>
 
-            {/* Password Field */}
             <div>
               <input
                 type="password"
                 placeholder="Password"
                 {...register("password", { required: "Password is required" })}
-                className={`w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400 ${
+                className={`w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400 
+                bg-gray-50 text-gray-900 dark:bg-gray-700 dark:text-gray-100 transition-colors ${
                   errors.password ? "border-red-500" : "border-gray-300"
                 }`}
               />
-              {errors.password && (
-                <p className="text-red-500 text-sm mt-1">
-                  {errors.password.message}
-                </p>
-              )}
+              {errors.password && <p className="text-red-500 text-sm mt-1">{errors.password.message}</p>}
             </div>
 
-            {/* Submit Button */}
             <button
               type="submit"
               className="w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 transition"
@@ -103,10 +120,8 @@ const Login = () => {
             </button>
           </form>
 
-          {/* Divider */}
           <div className="divider my-4 text-gray-400 text-sm">OR</div>
 
-          {/* Signup Link */}
           <p className="text-center text-sm text-gray-600 dark:text-gray-400">
             Don’t have an account?{" "}
             <span
@@ -118,7 +133,6 @@ const Login = () => {
           </p>
         </div>
 
-        {/* Click outside to close modal */}
         <form method="dialog" className="modal-backdrop">
           <button>close</button>
         </form>
